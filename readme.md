@@ -6,7 +6,6 @@ The goal is to keep the Synology NAS system untouched to be upgrade-proof. This 
 
 Despite this has been made to run on Synology NAS, this should run on other systems with / without minor adaptations.
 
-[[_TOC_]]
 
 ## Documentation
 
@@ -38,7 +37,7 @@ This is almost done. The file `action.d/iptables-common.local` switch the `REJEC
 
 ## Setup
 
-Ti finish the setup, you need to add your filters and jails. The provided ones relies on a [bitwarden_rs instance](https://githib.com/sosandroid/docker-bitwarden_rs-caddy-synology) and looks for the `bitwarden.log` file. If not available, you'll have an error at startup.
+To finish the setup, you need to add your filters and jails. The provided ones relies on a [bitwarden_rs instance](https://githib.com/sosandroid/docker-bitwarden_rs-caddy-synology) and looks for the `bitwarden.log` file. If not available, you'll have an error at startup.
 
 Ready for a first run : `docker-compose -f docker-compose_fail2ban.yml up`
 
@@ -51,12 +50,12 @@ Shutdown the servers issuing a `ctrl + C` in the terminal
 ## Startup and Maintenance
 
 ### Startup
-Once setup is finished, you're ready to launch your "_prouction_" server. Review all the settings and  environment varaibles in the `.yml` file. Test it using the same `docker-compose -f docker-compose_fail2ban.yml up` as previously. If anything goes well, stop them and run as `detached` with the following command.
+Once setup is finished, you're ready to launch your "_production_" server. Review all the settings and  environment variables in the `.yml` file. Test it using the same `docker-compose -f docker-compose_fail2ban.yml up` as previously. If everything goes well, stop them and run as `detached` with the following command.
 
 	`docker-compose -f docker-compose_fail2ban.yml up -d`
 
 ### Maintenance
-Upgrade on a regular basis the servers as they continue to evolve on a daily/weekly basis. Run from a terminal the following commands from as `root` from time to time.
+Upgrade on a regular basis the servers as they continue to evolve on a daily/weekly basis. Run from a terminal the following commands, as `root`, from time to time.
 
 ````sh
 cd /volumeX/docker/
