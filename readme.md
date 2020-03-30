@@ -15,7 +15,7 @@ Despite this has been made to run on Synology NAS, this should run on other syst
 The main issues on Synology are the following:
 
 - The embedded ban IP system cannot work on running Docker containers by design
-- `REJECT` blocktype is not supported and must be switched with `DROP`
+- `REJECT` blocktype is not supported and must be switched to `DROP`
 - Modiying DSM system is not upgrade-proof
 
 ## Pre-requisite
