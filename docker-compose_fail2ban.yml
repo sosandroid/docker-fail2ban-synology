@@ -15,8 +15,8 @@ services:
     - F2B_IPTABLES_CHAIN=INPUT
 
     volumes:
-    - /volume1/docker/fail2ban:/data
-    - /volume1/docker/bw-data:/bitwarden:ro
+    - /volumeX/docker/fail2ban:/data
+    - /volumeX/docker/bw-data:/bitwarden:ro
 
     network_mode: "host"
 
