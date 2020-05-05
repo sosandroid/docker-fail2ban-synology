@@ -2,7 +2,7 @@
 
 A docker-compose ready package to run [Fail2ban](https://github.com/crazy-max/docker-fail2ban) on Synology NAS. This setup is made to manage the Synology's DSM contraints and protect another container : Bitwarden_RS. However, adding your own actions, filters and jails allows use for other purposes.
 
-The goal is to keep the Synology NAS system untouched to be upgrade-proof. This the reason why we did not try to modify the system and improve the embedded banIP. The best deal has to be able to adapt the embedded `iptbles`.
+The goal is to keep the Synology NAS system untouched to be upgrade-proof. This the reason why we did not try to modify the system and improve the embedded banIP. The best deal has to be able to adapt the embedded `iptables`.
 
 Despite this has been made to run on Synology NAS, this should run on other systems with / without minor adaptations.
 
@@ -16,7 +16,7 @@ The main issues on Synology are the following:
 
 - The embedded ban IP system cannot work on running Docker containers by design
 - `REJECT` blocktype is not supported and must be switched to `DROP`
-- Modiying DSM system is not upgrade-proof
+- Modifying DSM system is not upgrade-proof
 
 ## Pre-requisite
 - A Docker compatible Synology NAS
