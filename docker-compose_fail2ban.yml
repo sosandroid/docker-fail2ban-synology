@@ -9,18 +9,16 @@ services:
     image: crazymax/fail2ban:latest
     environment: 
     - TZ=Europe/Paris
-    - F2B_DB_PURGE_AGE=30d
-    - F2B_LOG_TARGET=/data/fail2ban.log
-    - F2B_LOG_LEVEL=INFO
-    - F2B_IPTABLES_CHAIN=INPUT
+    - F2B_DB_PURGE_AGE=30d  # optional
+    - F2B_LOG_TARGET=/data/fail2ban.log # optional
 
     volumes:
     - /volumeX/docker/fail2ban:/data
-    - /volumeX/docker/bw-data:/bitwarden:ro
+    - /volumeX/docker/bw-data:/bitwarden:ro # mount complete Folder
+    - /volumeX/docker/vw-data/vaultwarden.log:/log/vaultwarden.log:ro # better: mount only Log-File
 
     network_mode: "host"
 
-    privileged: true
     cap_add:
         - NET_ADMIN
         - NET_RAW
