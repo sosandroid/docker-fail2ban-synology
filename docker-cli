@@ -1,6 +1,3 @@
-#---
-#Docker-cli file for Fail2ban
-#--- 
 docker run -d --name=fail2ban \
 -v /volumeX/docker/fail2ban/data:/data \
 -v /volumeX/docker/bw-data:/bitwarden:ro \  # mount complete Folder
