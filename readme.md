@@ -33,11 +33,11 @@ As convention, we will use as example the following
 2. Unzip and review `docker-compose_fail2ban.yml` settings
 3. Copy this repo content to `/volumeX/docker/`
 
-This is almost done. The file `action.d/iptables-common.local` switch the `REJECT` blocktype by `DROP`
+This is almost done. The file [`action.d/iptables.local`](fail2ban/action.d/iptables.local) switch the `REJECT` blocktype by `DROP`
 
 ## Setup
 
-To finish the setup, you need to add your filters and jails. The provided ones relies on a [bitwarden_rs instance](https://githib.com/sosandroid/docker-bitwarden_rs-caddy-synology) and looks for the `bitwarden.log` file. If not available, you'll have an error at startup.
+To finish the setup, you need to add your filters and jails. The provided ones relies on a [bitwarden_rs instance](https://github.com/sosandroid/docker-bitwarden_rs-caddy-synology) and looks for the `bitwarden.log` file. If not available, you'll have an error at startup.
 
 Ready for a first run : `docker-compose -f docker-compose_fail2ban.yml up`
 
