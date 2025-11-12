@@ -6,6 +6,8 @@ The goal is to keep the Synology NAS system untouched to be upgrade-proof. This 
 
 Despite this has been made to run on Synology NAS, this should run on other systems with / without minor adaptations.
 
+[![Buy me a coffee](./res/default-yellow.png)](https://www.buymeacoffee.com/ju9hJ8RqGk)
+
 
 ## Documentation
 
@@ -72,3 +74,4 @@ This setup has been made for [Bitwarden_RS proxied](https://github.com/sosandroi
 
 ## Collaboration
 Feel free to propose any optimization through pull requests
+
